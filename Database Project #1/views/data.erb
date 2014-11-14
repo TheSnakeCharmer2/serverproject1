@@ -1,0 +1,94 @@
+<style>
+  #user {
+      font-size:16;
+      color: #248b31;
+  }
+
+  #comment {
+      font-size:20;
+  }
+
+  body {
+      background-color: rgba(255, 160, 122, 0.55);
+  }
+
+  .smart-green {
+      margin-left:auto;
+      margin-right:auto;
+      float:left;
+      max-width: 400px;
+      width:300px;
+      height:120px;
+      background: #91f89d;
+      padding: 30px 30px 20px 30px;
+      font: 12px Arial, Helvetica, sans-serif;
+      color: #666;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+  }
+
+  .smart-green label {
+      display: block;
+      margin: 0px 0px 5px;
+      width:300px;
+  }
+
+  .smart-green label>span {
+      float: left;
+      margin-top: 4px;
+      color: #5E5E5E;
+  }
+
+</style>
+
+<body>
+
+<h1><u>Database form</u></h1>
+<form method="post" action="/print" class="smart-green">
+  <u>Enter information below:</u><br>
+  <br>
+  <label>
+        <span>Your Username:    </span>
+        <input type="text" name="username" placeholder="Your Username"> <br>
+  </label>
+  <label>
+    <span>Something about you:</span>
+    <input type="text" name="comment" placeholder="Your comment"> <br>
+  </label>
+  <br>
+  <label>
+    <input type="submit" value="Submit" >
+  </label>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<dl>
+  <dt>User: <%= @user %></dt>
+  <dt>Comment: <%= @comment %></dt>
+</dl>
+<br>
+<u><h3>Previous Entries:</h3></u>
+
+
+<dl>
+    <% @items.all.reverse!.each do |x| %>
+        <dt>
+          <dd id="user"><%= x[:name] %>:</dd> <br>
+          <dd id="comment"><%= x[:comment] %></dd> </dt>
+      <hr>
+    <% end %>
+</dl>
+
+
+
+
+</body>

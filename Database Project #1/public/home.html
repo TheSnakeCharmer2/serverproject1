@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        background-color: rgba(255, 160, 122, 0.71);
+    }
+
+    .smart-green {
+        margin-left:auto;
+        margin-right:auto;
+        float:left;
+        max-width: 500px;
+        background: #91f89d;
+        padding: 30px 30px 20px 30px;
+        font: 12px Arial, Helvetica, sans-serif;
+        color: #666;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+    }
+
+    .smart-green label {
+        display: block;
+        margin: 0px 0px 5px;
+    }
+
+    .smart-green label>span {
+        float: left;
+        margin-top: 4px;
+        color: #5E5E5E;
+    }
+
+</style>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Database Form</title>
+</head>
+<body>
+<h1><u>Database form</u></h1>
+<form method="post" action="/print" class="smart-green">
+    <u>Enter information below:</u><br>
+    <br>
+    <label>
+        <span>Your Username :    </span>
+        <input type="text" name="username" placeholder="Your Username"> <br>
+    </label>
+    <label>
+        <span>Something about you :</span>
+        <input type="text" name="comment" placeholder="Your comment"> <br>
+    </label>
+    <br>
+    <label id="submit">
+        <input type="submit" value="Submit" >
+    </label>
+</form>
+
+
+</body>
+</html>
